@@ -1,0 +1,10 @@
+{
+  "name": "opencascade.js-emscripten-dynamic-library-issue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sebastian Alff <donalffons@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "opencascade.js": "git+https://github.com/donalffons/opencascade.js.git#modularization"
+  }
+}

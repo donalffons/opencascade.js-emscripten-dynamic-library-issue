@@ -5,6 +5,14 @@
   "author": "Sebastian Alff <donalffons@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "opencascade.js": "git+https://github.com/donalffons/opencascade.js.git#modularization"
+    "opencascade.js": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.1"
+  },
+  "scripts": {
+    "start": "babel-node src/index.js --ignore='/node_modules/'"
   }
 }

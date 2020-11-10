@@ -1,24 +1,4 @@
-const opencascade = require("opencascade.js/dist/release/dynamic_node.js");
-
-const dlModules = [
-  "TKernel",
-  "TKMath",
-  "TKG2d",
-  "TKV3d",
-  "TKService",
-  "TKMesh",
-  "TKSTEP",
-  "TKSTEP209",
-  "TKSTEPAttr",
-  "TKSTEPBase",
-  "TKXSBase",
-  "TKShHealing",
-  "TKGeomAlgo",
-  "TKBRep",
-  "TKGeomBase",
-  "TKG3d",
-  "TKTopAlgo",
-].map(l => "node_modules/opencascade.js/dist/release/modules/" + l + ".wasm");
+import opencascade from "opencascade.js/dist/opencascade.wasm.js";
 
 console.log("starting opencascade.js...");
 const start = Date.now();
@@ -28,11 +8,11 @@ new opencascade({
   },
   locateFile(path) {
     if(path.endsWith('.wasm')) {
-      return "node_modules/opencascade.js/dist/release/dynamic_node.wasm";
+      return "node_modules/opencascade.js/dist/opencascade.wasm.wasm";
     }
     return path;
   },
-  dynamicLibraries: dlModules,
+  dynamicLibraries: [],
 }).then(oc => {
   console.log("opencascade.js started");
   const end = Date.now();
